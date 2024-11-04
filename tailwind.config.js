@@ -5,7 +5,7 @@ module.exports = {
   theme: {
   	extend: {
 		backgroundImage: {
-			'hero-pattern': `url("./src/assets/herobg.png")`,
+			'hero-pattern': `url("/herobg.png")`,
 		},
   		borderRadius: {
   			lg: 'var(--radius)',
