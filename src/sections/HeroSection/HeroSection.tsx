@@ -4,7 +4,7 @@ const HeroSection = () => {
     return (
         <div id="home" className="max-w-5xl mx-auto px-8">
             <BackgroundBeamsWithCollision>
-                <span className="text-sm relative z-20 md:text-lg lg:text-5xl font-bold text-center text-white font-sans tracking-tight">
+                <span className="text-3xl relative z-20 lg:text-5xl font-bold text-center text-white font-sans tracking-tight">
                     I'm a{" "}
                     <span
                     className="bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 ">software engineer
