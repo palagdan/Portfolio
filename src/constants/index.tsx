@@ -11,29 +11,21 @@ export const navLinks = [
 
 export const experience = [
     {
-        title: "2024",
+        title: "Jul 2024 - Present",
         content: (
             <div>
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                    Built and launched Aceternity UI and Aceternity UI Pro from scratch
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                </div>
+                <span className=" text-lg font-bold mb-8 text-white">
+                    Fullstack Developer | KBSS-CVUT
+                </span>
+                <br/>
+                <span className="text-sm text-gray-500">Prague, Czech Republic</span>
+                <br/>
+                <span className="text-sm mb-8 text-white">Develop knowledge-based information systems using Semantic Web technologies.
+                    Implemented a mini-framework to configure RDF modules using annotations. Localized the application by implementing parameterized messages using message IDs.
+                </span>
             </div>
         ),
     },
-    {
-        title: "2024",
-        content: (
-            <div>
-                <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                    Built and launched Aceternity UI and Aceternity UI Pro from scratch
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                </div>
-            </div>
-        ),
-    }
 ]
 
 export const projects = [
