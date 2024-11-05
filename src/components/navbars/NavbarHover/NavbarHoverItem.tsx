@@ -12,7 +12,7 @@ import {Link} from "react-scroll";
     className?: string;
     children: React.ReactNode;
     to?: string;
-    onClick: () => void
+    onClick?: () => void
 }) => {
     return (
         <div className={cn("relative z-10 px-2 py-2 inline-block", className)}>
