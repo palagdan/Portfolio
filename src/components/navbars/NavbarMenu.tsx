@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
-import { navLinks } from "@/constants";
+import {navLinks, resumeLink} from "@/constants";
 import NavbarHover from "@/components/navbars/NavbarHover/NavbarHover.tsx";
 import NavbarHoverItem from "@/components/navbars/NavbarHover/NavbarHoverItem.tsx";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -42,7 +42,7 @@ const NavbarMenu = () => {
                         </NavbarHoverItem>
                     ))}
                 </NavbarHover>
-                <BorderMagicButton>Resume</BorderMagicButton>
+                <BorderMagicButton><a target='_blank' rel='noopener noreferrer' href={resumeLink}>Resume</a></BorderMagicButton>
             </div>
 
             <div className="sm:hidden flex w-full items-center justify-between">
@@ -119,7 +119,7 @@ const NavbarMenu = () => {
                                 </NavbarHoverItem>
                             </motion.div>
                         ))}
-                        <BorderMagicButton>Resume</BorderMagicButton>
+                        <BorderMagicButton><a target='_blank' rel='noopener noreferrer' href={resumeLink}>Resume</a></BorderMagicButton>
                     </motion.div>
                 )}
             </AnimatePresence>

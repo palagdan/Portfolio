@@ -28,6 +28,8 @@ export const experience = [
     },
 ]
 
+export const resumeLink = "https://www.dropbox.com/scl/fi/003ypv66ukotz1kh28mqg/daniil_palagin_cv.pdf?rlkey=q9g1ij4kb1xh7k2xn9wix614s&st=vdpjohfr&dl=0"
+
 export const projects = [
     {
         title: "CLI Poker Game",
