@@ -26,6 +26,23 @@ export const experience = [
             </div>
         ),
     },
+    {
+        title: "September 2024 - January 2025",
+        content: (
+            <div>
+                <span className=" text-lg font-bold mb-8 text-white">
+                    Frontend Developer | Prosaz x FIT CVUT
+                </span>
+                <br/>
+                <span className="text-sm text-gray-500">Prague, Czech Republic</span>
+                <br/>
+                <span className="text-sm mb-8 text-white">Designed and developed the frontend for the worker service of the firm Prosaz using React and TypeScript.
+                    Focused on creating a user-friendly interface and ensuring efficient, maintainable code, while adhering to
+                    modern frontend development best practices.
+                </span>
+            </div>
+        ),
+    }
 ]
 
 export const resumeLink = "https://www.dropbox.com/scl/fi/003ypv66ukotz1kh28mqg/daniil_palagin_cv.pdf?rlkey=q9g1ij4kb1xh7k2xn9wix614s&st=vdpjohfr&dl=0"
@@ -68,7 +85,7 @@ export const projects = [
     {
         title: "Drake",
         description:
-           "The Drake is a board game for two players inspired by the successful game The Duke. Essentially, it is a simplified version of The Duke played on a smaller game board with fewer pieces, and some of its rules have been adjusted to facilitate easier programming of the game. The Drake has several possible versions based on various modifications and expansions that can enhance the so-called basic version.",
+            "The Drake is a board game for two players inspired by the successful game The Duke. Essentially, it is a simplified version of The Duke played on a smaller game board with fewer pieces, and some of its rules have been adjusted to facilitate easier programming of the game. The Drake has several possible versions based on various modifications and expansions that can enhance the so-called basic version.",
         link: "https://github.com/palagdan/drake",
         image: "drake.png"
     },
