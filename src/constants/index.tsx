@@ -49,6 +49,13 @@ export const resumeLink = "https://www.dropbox.com/scl/fi/003ypv66ukotz1kh28mqg/
 
 export const projects = [
     {
+        title: "GitmateAI",
+        description:
+            "An organizational AI GitHub agent that automates issue and pull request workflows, can semantically search across repositories, and serves as a chatbot for the organizations.",
+        link: "https://github.com/palagdan/GitmateAI",
+        image: "gitmateai.png"
+    },
+    {
         title: "CLI Poker Game",
         description:
             "This is a Python-based implementation of a Texas Hold'em game, allowing players to experience the excitement of one of the most popular poker variations.",
