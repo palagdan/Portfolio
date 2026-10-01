@@ -32,9 +32,16 @@ Tracking fixes/refactors from the code review. Work top-down; each item is indep
 - [x] **Add meta tags** — `index.html`: title, meta description, favicon (avatar.jpg), Open Graph + Twitter card tags (OG/Twitter images use absolute GH Pages URLs).
 - [x] **Image perf** — project images get `loading="lazy"` + `decoding="async"`. (Height is already fixed via CSS `h-48`, so CLS was already controlled — skipped width/height attrs to avoid a misleading aspect hint.)
 
-## 🟢 Pass 4 — Tooling & repo hygiene
+## 🟢 Pass 4 — Tooling & repo hygiene ✅ DONE
 
-- [ ] **Remove duplicate deploy path** — keep the GitHub Actions workflow; drop the `gh-pages` dep + `predeploy`/`deploy` scripts in `package.json`.
-- [ ] **Drop React Router** — only used for the (broken) project links; single scrolling page already uses `react-scroll`. Simplify `main.tsx`, remove `react-router-dom`.
-- [ ] **Fix config module mismatch** — `tailwind.config.js` / `postcss.config.js` use `module.exports` under `"type": "module"`. Rename to `.cjs` or convert to `export default`.
-- [ ] **Add CI checks before deploy** — run `type-check` + `lint` in the workflow so hook/type errors fail the build.
+- [x] **Remove duplicate deploy path** — dropped `gh-pages` dep + `predeploy`/`deploy` scripts; GitHub Actions is the sole deploy path.
+- [x] **Drop React Router** — removed `react-router-dom`; `main.tsx` now wraps `<App/>` in `<StrictMode>` (which was imported but unused).
+- [x] **Fix config module mismatch** — `tailwind.config.js` converted to ESM (`export default` + `import`). `postcss.config.js`/`eslint.config.js` were already ESM.
+- [x] **Add CI checks before deploy** — workflow now runs `type-check` + `lint` before `build`; added npm caching.
+- [x] **Bonus** — fixed the broken `lint` script (`--ext` is invalid under ESLint 9 flat config) and cleared 2 pre-existing lint errors + 1 warning in `background-beams`. Full suite (`type-check` + `lint` + `build`) verified green locally.
+
+---
+
+## Notes / not done
+- `npm audit` flags CVEs in `vite@5` and `postcss@8`. Bumping needs a test pass (major for Vite). Not touched to avoid an unverified breaking change — do as a separate dependency-upgrade task.
+- Optional: store experience entries as plain data fields instead of inline JSX in `constants/index.tsx` (deferred from Pass 2).
