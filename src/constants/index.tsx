@@ -4,6 +4,10 @@ export const navLinks = [
         link: "experience",
     },
     {
+        name: "Education",
+        link: "education",
+    },
+    {
         name: "Projects",
         link: "projects",
     },
@@ -60,6 +64,21 @@ export const experience = [
                     Focused on creating a user-friendly interface and ensuring efficient, maintainable code, while adhering to
                     modern frontend development best practices.
                 </span>
+            </div>
+        ),
+    }
+]
+
+export const education = [
+    {
+        title: "September 2022 - June 2025",
+        content: (
+            <div>
+                <div className="flex items-center gap-3 mb-2">
+                    <img src="logos/fitcvut.png" alt="FIT CVUT logo" className="w-8 h-8 rounded-md object-cover shrink-0" />
+                    <span className="text-lg font-bold text-white">Bachelor | Czech Technical University in Prague</span>
+                </div>
+                <span className="text-sm text-white">Faculty of Information Technology (FIT) | Software Engineering</span>
             </div>
         ),
     }

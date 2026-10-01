@@ -1,6 +1,7 @@
 import HeroSection from "@/sections/HeroSection/HeroSection.tsx";
 import NavbarMenu from "@/components/navbars/NavbarMenu.tsx";
 import ExperienceSection from "@/sections/ExperienceSection/ExperienceSection.tsx";
+import EducationSection from "@/sections/EducationSection/EducationSection.tsx";
 import ProjectsSection from "@/sections/ProjectsSection/ProjectsSection.tsx";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
                 <HeroSection/>
             </div>
                 <ExperienceSection/>
+                <EducationSection/>
                 <ProjectsSection/>
         </div>
     )
