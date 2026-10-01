@@ -10,9 +10,9 @@ export const CardImage = ({
     className?: string;
 }) => {
     return (
-        <div className={cn("relative rounded-xl overflow-hidden", className)}>
+        <div className={cn("relative rounded-t-lg overflow-hidden", className)}>
             <img
-                src={"https://github.com/shadcn.png"}
+                src={src}
                 alt={alt}
                 className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
             />

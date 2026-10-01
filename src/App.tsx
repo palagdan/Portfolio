@@ -1,6 +1,6 @@
 import HeroSection from "@/sections/HeroSection/HeroSection.tsx";
 import NavbarMenu from "@/components/navbars/NavbarMenu.tsx";
-import ExperienceSection from "@/sections/ExpierenceSection/ExperienceSection.tsx";
+import ExperienceSection from "@/sections/ExperienceSection/ExperienceSection.tsx";
 import ProjectsSection from "@/sections/ProjectsSection/ProjectsSection.tsx";
 
 function App() {

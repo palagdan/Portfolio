@@ -14,7 +14,7 @@ export const experience = [
         title: "Jul 2024 - Present",
         content: (
             <div>
-                <span className=" text-lg font-bold mb-8 text-white">
+                <span className="text-lg font-bold mb-8 text-white">
                     Fullstack Developer | KBSS-CVUT
                 </span>
                 <br/>
@@ -30,7 +30,7 @@ export const experience = [
         title: "September 2024 - January 2025",
         content: (
             <div>
-                <span className=" text-lg font-bold mb-8 text-white">
+                <span className="text-lg font-bold mb-8 text-white">
                     Frontend Developer | Prosaz x FIT CVUT
                 </span>
                 <br/>

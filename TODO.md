@@ -16,15 +16,15 @@ Tracking fixes/refactors from the code review. Work top-down; each item is indep
 - [x] `src/components/ui/navigation-menu.tsx` (unused shadcn component)
 - [x] Pruned unused deps: `@radix-ui/react-navigation-menu`, `@radix-ui/react-icons`, `lucide-react`, `class-variance-authority` (all 0 usages in src).
 
-## 🟡 Pass 2 — Refactor & consolidate
+## 🟡 Pass 2 — Refactor & consolidate ✅ DONE
 
-- [ ] **Fix Rules of Hooks violation** — `src/components/ui/timeline.tsx:44-54`: `useRef`/`useInView` are called inside `data.map()`. Extract each row into a `<TimelineItem>` component that calls the hooks at its top level.
-- [ ] **One source of truth for Card components** — `card-hover-effect.tsx` re-defines `Card`/`CardImage`/`CardTitle`/`CardDescription` inline while `src/components/cards/*` has duplicates. Keep `cards/`, fix `cards/CardImage.tsx:15` (hardcoded `shadcn.png`, ignores `src` prop), import them into `HoverEffect`, delete the inline copies.
-- [ ] **Decide on theme system** — `darkMode: ["class"]` + full `:root`/`.dark` HSL vars in `index.css`, but nothing adds a `dark` class → all `dark:` variants are no-ops and the CSS vars are unused. Either commit to the token system or strip to the colors actually used.
-- [ ] **Fix global CSS selector misuse** — `src/index.css:5-11`: move `scroll-behavior` / `color-scheme` from `*` to `html`/`:root`.
-- [ ] **Rename typo folder** — `src/sections/ExpierenceSection/` → `ExperienceSection/` (update imports in `App.tsx`).
-- [ ] **Unify section elements** — `ProjectsSection` uses `<div>`, `ExperienceSection` uses `<section>`; make both `<section>`.
-- [ ] **Clean constants** — `src/constants/index.tsx`: strip leading spaces in classNames (e.g. line 17); consider storing experience as plain fields (`role`, `company`, `location`, `summary`) and rendering markup in the component.
+- [x] **Fix Rules of Hooks violation** — extracted a `TimelineItem` component in `timeline.tsx`; hooks now run at component top level (also dropped the unused `useMotionValueEvent` import).
+- [x] **One source of truth for Card components** — the inline copies were the correct ones (the `cards/*` files were unused and `cards/CardImage` ignored its `src`). Promoted the correct versions into `cards/*`, fixed `CardImage`, and `HoverEffect` now imports them; inline copies removed.
+- [x] **Decide on theme system** — stripped the dead layer: removed the `.dark` HSL block from `index.css`, `darkMode` from the tailwind config, and all no-op `dark:` utility classes. Zero visual change (no `dark` class ever existed). Kept dark-only via explicit colors.
+- [x] **Fix global CSS selector misuse** — moved `scroll-behavior` / `color-scheme` from `*` to `html`.
+- [x] **Rename typo folder** — `ExpierenceSection/` → `ExperienceSection/`; updated `App.tsx` import.
+- [x] **Unify section elements** — `ProjectsSection` now uses `<section>`.
+- [x] **Clean constants** — stripped leading spaces in classNames. (Left experience as JSX `content`; the plain-fields refactor was optional and more invasive — deferred.)
 
 ## 🟡 Pass 3 — Accessibility & SEO
 
