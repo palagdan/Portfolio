@@ -14,10 +14,10 @@ export const experience = [
         title: "November 2025 - Present",
         content: (
             <div>
-                <span className="text-lg font-bold mb-8 text-white">
-                    Integration Engineer | Make
-                </span>
-                <br/>
+                <div className="flex items-center gap-3 mb-2">
+                    <img src="logos/make.jpg" alt="Make logo" className="w-8 h-8 rounded-md object-cover shrink-0" />
+                    <span className="text-lg font-bold text-white">Integration Engineer | Make</span>
+                </div>
                 <span className="text-sm text-gray-500">Prague, Czech Republic</span>
                 <ul className="mt-4 list-disc pl-5 text-sm text-white space-y-2">
                     <li>Maintain and develop Make's ecosystem of 3,500+ app integrations, keeping existing apps reliable and building new ones that extend what users can automate.</li>
@@ -32,10 +32,10 @@ export const experience = [
         title: "September 2023 - October 2025",
         content: (
             <div>
-                <span className="text-lg font-bold mb-8 text-white">
-                    Fullstack Software Engineer | KBSS-CVUT
-                </span>
-                <br/>
+                <div className="flex items-center gap-3 mb-2">
+                    <img src="logos/cvut.jpg" alt="CVUT logo" className="w-8 h-8 rounded-md object-cover shrink-0" />
+                    <span className="text-lg font-bold text-white">Fullstack Software Engineer | KBSS-CVUT</span>
+                </div>
                 <span className="text-sm text-gray-500">Prague, Czech Republic</span>
                 <ul className="mt-4 list-disc pl-5 text-sm text-white space-y-2">
                     <li>Designed and integrated a security role system supporting both internal and Keycloak-based authorization within a single project.</li>
@@ -50,10 +50,10 @@ export const experience = [
         title: "September 2024 - January 2025",
         content: (
             <div>
-                <span className="text-lg font-bold mb-8 text-white">
-                    Frontend Developer | Prosaz x FIT CVUT
-                </span>
-                <br/>
+                <div className="flex items-center gap-3 mb-2">
+                    <img src="logos/fitcvut.png" alt="FIT CVUT logo" className="w-8 h-8 rounded-md object-cover shrink-0" />
+                    <span className="text-lg font-bold text-white">Frontend Developer | Prosaz x FIT CVUT</span>
+                </div>
                 <span className="text-sm text-gray-500">Prague, Czech Republic</span>
                 <br/>
                 <span className="text-sm mb-8 text-white">Designed and developed the frontend for the worker service of the firm Prosaz using React and TypeScript.
