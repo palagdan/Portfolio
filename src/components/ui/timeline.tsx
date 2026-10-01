@@ -73,11 +73,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
+    const el = ref.current;
+    if (!el) return;
+
+    const updateHeight = () => setHeight(el.getBoundingClientRect().height);
+    updateHeight();
+
+    // Re-measure whenever the content reflows (logos/fonts loading, resize),
+    // so the spine and the animated beam always span the full timeline.
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
