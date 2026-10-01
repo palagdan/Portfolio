@@ -16,8 +16,8 @@ const TimelineItem = ({ item }: { item: TimelineEntry }) => {
   const titleRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const titleInView = useInView(titleRef, { margin: "-100px 0px -100px 0px" });
-  const contentInView = useInView(contentRef, { margin: "-100px 0px -100px 0px" });
+  const titleInView = useInView(titleRef, { once: true, margin: "-100px 0px -100px 0px" });
+  const contentInView = useInView(contentRef, { once: true, margin: "-100px 0px -100px 0px" });
 
   return (
       <div className="flex justify-start pt-10 md:pt-40 md:gap-10">
