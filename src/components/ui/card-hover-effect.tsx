@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import {Link} from "react-router-dom";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -11,10 +10,11 @@ export const HoverEffect = ({
     title: string;
     description: string;
     link: string;
+    image: string;
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -24,9 +24,11 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          to={item?.link}
-          key={item?.link}
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={item.link}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -55,7 +57,7 @@ export const HoverEffect = ({
               <CardDescription>{item.description}</CardDescription>
             </div>
           </Card>
-        </Link>
+        </a>
       ))}
     </div>
   );

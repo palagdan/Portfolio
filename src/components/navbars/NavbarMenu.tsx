@@ -32,7 +32,7 @@ const NavbarMenu = () => {
                     <div className="flex items-center justify-between space-x-2 text-sm z-10 font-bold">
                         <Avatar>
                             <AvatarImage src="avatar.jpg" />
-                            <AvatarFallback>CN</AvatarFallback>
+                            <AvatarFallback>DP</AvatarFallback>
                         </Avatar>
                         <span className="text-white z-10">Daniil Palagin</span>
                     </div>
@@ -42,14 +42,14 @@ const NavbarMenu = () => {
                         </NavbarHoverItem>
                     ))}
                 </NavbarHover>
-                <BorderMagicButton><a target='_blank' rel='noopener noreferrer' href={resumeLink}>Resume</a></BorderMagicButton>
+                <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
             </div>
 
             <div className="sm:hidden flex w-full items-center justify-between">
                 <div className="flex items-center justify-between space-x-2 text-sm z-10 font-bold bg-tertiaryTmp p-3 rounded-full cursor-pointer">
                     <Avatar>
                         <AvatarImage src="avatar.jpg" />
-                        <AvatarFallback>CN</AvatarFallback>
+                        <AvatarFallback>DP</AvatarFallback>
                     </Avatar>
                     <span className="text-white z-10 font-bold">Daniil Palagin</span>
                 </div>
@@ -84,7 +84,7 @@ const NavbarMenu = () => {
                                 <div className="flex items-center justify-between space-x-2 text-sm font-bold">
                                     <Avatar>
                                         <AvatarImage src="avatar.jpg" />
-                                        <AvatarFallback>CN</AvatarFallback>
+                                        <AvatarFallback>DP</AvatarFallback>
                                     </Avatar>
                                     <span className="text-white z-10 font-bold">Daniil Palagin</span>
                                 </div>
@@ -119,7 +119,7 @@ const NavbarMenu = () => {
                                 </NavbarHoverItem>
                             </motion.div>
                         ))}
-                        <BorderMagicButton><a target='_blank' rel='noopener noreferrer' href={resumeLink}>Resume</a></BorderMagicButton>
+                        <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
                     </motion.div>
                 )}
             </AnimatePresence>
