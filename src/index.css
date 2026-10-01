@@ -13,6 +13,16 @@ html {
     color-scheme: dark;
 }
 
+/* Entrance animations (e.g. the timeline's `initial={{ x: 100 }}`) offset
+   off-screen content to the right until it scrolls into view. Clip horizontal
+   overflow so that never produces a horizontal scrollbar / white gap on the
+   right at mobile widths. `clip` (not `hidden`) avoids creating a scroll
+   container, so `position: sticky` in the timeline keeps working. */
+html,
+body {
+    overflow-x: clip;
+}
+
 
 @layer base {
   :root {
@@ -49,6 +59,6 @@ html {
     @apply border-border;
     }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-primaryTmp text-foreground;
     }
 }
