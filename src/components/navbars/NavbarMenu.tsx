@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { Link } from "react-scroll";
 import {navLinks, resumeLink} from "@/constants";
 import NavbarHover from "@/components/navbars/NavbarHover/NavbarHover.tsx";
 import NavbarHoverItem from "@/components/navbars/NavbarHover/NavbarHoverItem.tsx";
@@ -29,13 +30,13 @@ const NavbarMenu = () => {
         <div className="py-8 fixed top-0 left-0 w-full z-[100] px-4 sm:px-8">
             <div className="sm:flex w-full items-center justify-center gap-4 top-20 hidden">
                 <NavbarHover>
-                    <div className="flex items-center justify-between space-x-2 text-sm z-10 font-bold">
+                    <Link to="home" smooth={true} duration={500} className="flex items-center justify-between space-x-2 text-sm z-10 font-bold cursor-pointer">
                         <Avatar>
                             <AvatarImage src="avatar.jpg" />
                             <AvatarFallback>DP</AvatarFallback>
                         </Avatar>
                         <span className="text-white z-10">Daniil Palagin</span>
-                    </div>
+                    </Link>
                     {navLinks.map((item) => (
                         <NavbarHoverItem to={item.link} key={item.name}>
                             {item.name}
@@ -46,13 +47,13 @@ const NavbarMenu = () => {
             </div>
 
             <div className="sm:hidden flex w-full items-center justify-between">
-                <div className="flex items-center justify-between space-x-2 text-sm z-10 font-bold bg-tertiaryTmp p-3 rounded-full cursor-pointer">
+                <Link to="home" smooth={true} duration={500} className="flex items-center justify-between space-x-2 text-sm z-10 font-bold bg-tertiaryTmp p-3 rounded-full cursor-pointer">
                     <Avatar>
                         <AvatarImage src="avatar.jpg" />
                         <AvatarFallback>DP</AvatarFallback>
                     </Avatar>
                     <span className="text-white z-10 font-bold">Daniil Palagin</span>
-                </div>
+                </Link>
 
                 <motion.div
                     className="bg-tertiaryTmp p-3 rounded-full cursor-pointer"
@@ -81,13 +82,13 @@ const NavbarMenu = () => {
                     >
                         <motion.div className="absolute py-8 top-0 left-0 w-full px-4 sm:px-8">
                             <div className="flex justify-between items-center space-x-2 text-sm z-10 font-bold">
-                                <div className="flex items-center justify-between space-x-2 text-sm font-bold">
+                                <Link to="home" smooth={true} duration={500} onClick={() => setToggle(false)} className="flex items-center justify-between space-x-2 text-sm font-bold cursor-pointer">
                                     <Avatar>
                                         <AvatarImage src="avatar.jpg" />
                                         <AvatarFallback>DP</AvatarFallback>
                                     </Avatar>
                                     <span className="text-white z-10 font-bold">Daniil Palagin</span>
-                                </div>
+                                </Link>
                                 <div
                                     className="bg-tertiaryTmp p-2 rounded-full cursor-pointer"
                                     onClick={() => setToggle(false)}
