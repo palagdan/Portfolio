@@ -14,6 +14,8 @@ export const CardImage = ({
             <img
                 src={src}
                 alt={alt}
+                loading="lazy"
+                decoding="async"
                 className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
             />
         </div>

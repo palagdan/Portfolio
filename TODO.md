@@ -26,11 +26,11 @@ Tracking fixes/refactors from the code review. Work top-down; each item is indep
 - [x] **Unify section elements** — `ProjectsSection` now uses `<section>`.
 - [x] **Clean constants** — stripped leading spaces in classNames. (Left experience as JSX `content`; the plain-fields refactor was optional and more invasive — deferred.)
 
-## 🟡 Pass 3 — Accessibility & SEO
+## 🟡 Pass 3 — Accessibility & SEO ✅ DONE
 
-- [ ] **Add a single `<h1>`** — hero name/role in `HeroSection.tsx:7` is a `<span>`; demote section headings from `<h1>` to `<h2>`.
-- [ ] **Add meta tags** — `index.html`: meta description, favicon, Open Graph + Twitter card tags (for link previews).
-- [ ] **Image perf** — project images: add `width`/`height` + `loading="lazy"` to prevent CLS and eager loading.
+- [x] **Add a single `<h1>`** — hero pitch is now the `<h1>`; "Work Experience" and "Projects" demoted to `<h2>`.
+- [x] **Add meta tags** — `index.html`: title, meta description, favicon (avatar.jpg), Open Graph + Twitter card tags (OG/Twitter images use absolute GH Pages URLs).
+- [x] **Image perf** — project images get `loading="lazy"` + `decoding="async"`. (Height is already fixed via CSS `h-48`, so CLS was already controlled — skipped width/height attrs to avoid a misleading aspect hint.)
 
 ## 🟢 Pass 4 — Tooling & repo hygiene
 
