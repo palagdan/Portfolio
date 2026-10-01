@@ -11,18 +11,38 @@ export const navLinks = [
 
 export const experience = [
     {
-        title: "Jul 2024 - Present",
+        title: "November 2025 - Present",
         content: (
             <div>
                 <span className="text-lg font-bold mb-8 text-white">
-                    Fullstack Developer | KBSS-CVUT
+                    Integration Engineer | Make
                 </span>
                 <br/>
                 <span className="text-sm text-gray-500">Prague, Czech Republic</span>
-                <br/>
-                <span className="text-sm mb-8 text-white">Develop knowledge-based information systems using Semantic Web technologies.
-                    Implemented a mini-framework to configure RDF modules using annotations. Localized the application by implementing parameterized messages using message IDs.
+                <ul className="mt-4 list-disc pl-5 text-sm text-white space-y-2">
+                    <li>Maintain and develop Make's ecosystem of 3,500+ app integrations, keeping existing apps reliable and building new ones that extend what users can automate.</li>
+                    <li>Design and deliver platform features and workflows, and investigate and fix bugs so scenarios behave correctly for users.</li>
+                    <li>Analyze user needs and assess the impact of proposed solutions, including changes that can affect millions of scenarios, to decide what to build and how to shape it.</li>
+                    <li>Built and continue to develop the team's AI agent skill, increasing the team's impact and improving how AI is used in day-to-day work.</li>
+                </ul>
+            </div>
+        ),
+    },
+    {
+        title: "September 2023 - October 2025",
+        content: (
+            <div>
+                <span className="text-lg font-bold mb-8 text-white">
+                    Fullstack Software Engineer | KBSS-CVUT
                 </span>
+                <br/>
+                <span className="text-sm text-gray-500">Prague, Czech Republic</span>
+                <ul className="mt-4 list-disc pl-5 text-sm text-white space-y-2">
+                    <li>Designed and integrated a security role system supporting both internal and Keycloak-based authorization within a single project.</li>
+                    <li>Implemented a mini-framework to configure RDF modules using annotations.</li>
+                    <li>Replaced hardcoded strings with parameterized message IDs, enabling Czech and English localization across several apps.</li>
+                    <li>Designed and developed an AI-powered GitHub bot that automates code reviews and issue/PR workflows.</li>
+                </ul>
             </div>
         ),
     },
