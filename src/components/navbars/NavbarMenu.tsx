@@ -12,8 +12,8 @@ const NavbarMenu = () => {
     const [toggle, setToggle] = useState(false);
 
     const overlayVariants = {
-        hidden: { opacity: 0, scale: 0.95 },
-        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
     };
 
     const itemVariants = {
@@ -75,16 +75,16 @@ const NavbarMenu = () => {
             <AnimatePresence>
                 {toggle && (
                     <motion.div
-                        className="fixed top-0 left-0 w-full h-full bg-tertiaryTmp flex flex-col justify-center items-center z-[1000]"
+                        className="fixed top-0 left-0 w-full h-full bg-tertiaryTmp/60 backdrop-blur-xl flex flex-col justify-center items-center z-[1000]"
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
                         variants={overlayVariants}
-                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
                     >
                         <motion.div className="absolute py-8 top-0 left-0 w-full px-4 sm:px-8">
                             <div className="flex justify-between items-center space-x-2 text-sm z-10 font-bold">
-                                <Link to="home" smooth={true} duration={500} onClick={() => setToggle(false)} className="flex items-center justify-between space-x-2 text-sm font-bold cursor-pointer">
+                                <Link to="home" smooth={true} duration={500} onClick={() => setToggle(false)} className="flex items-center justify-between space-x-2 text-sm font-bold bg-tertiaryTmp p-3 rounded-full cursor-pointer">
                                     <Avatar>
                                         <AvatarImage src="avatar.jpg" />
                                         <AvatarFallback>DP</AvatarFallback>
@@ -92,14 +92,22 @@ const NavbarMenu = () => {
                                     <span className="text-white z-10 font-bold">Daniil Palagin</span>
                                 </Link>
                                 <div
-                                    className="bg-tertiaryTmp p-2 rounded-full cursor-pointer"
+                                    className="bg-tertiaryTmp p-3 rounded-full cursor-pointer"
                                     onClick={() => setToggle(false)}
+                                    role="button"
+                                    aria-label="Close menu"
                                 >
-                                    <img
-                                        src="cancel.png"
-                                        alt="close menu"
-                                        className="w-[28px] h-[28px] object-contain"
-                                    />
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth={2.5}
+                                        strokeLinecap="round"
+                                        className="w-[28px] h-[28px] text-amber-500"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M6 6l12 12M18 6L6 18" />
+                                    </svg>
                                 </div>
                             </div>
                         </motion.div>
@@ -122,10 +130,25 @@ const NavbarMenu = () => {
                                 </NavbarHoverItem>
                             </motion.div>
                         ))}
-                        <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
-                        <div className="mt-6">
+                        <motion.div
+                            variants={itemVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            transition={{ delay: navLinks.length * 0.1, duration: 0.3 }}
+                        >
+                            <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
+                        </motion.div>
+                        <motion.div
+                            className="mt-6"
+                            variants={itemVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            transition={{ delay: (navLinks.length + 1) * 0.1, duration: 0.3 }}
+                        >
                             <SocialLinks onNavigate={() => setToggle(false)} />
-                        </div>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
