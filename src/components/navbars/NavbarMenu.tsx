@@ -6,6 +6,7 @@ import NavbarHover from "@/components/navbars/NavbarHover/NavbarHover.tsx";
 import NavbarHoverItem from "@/components/navbars/NavbarHover/NavbarHoverItem.tsx";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import BorderMagicButton from "@/components/buttons/BorderMagicButton.tsx";
+import SocialLinks from "@/components/navbars/SocialLinks.tsx";
 
 const NavbarMenu = () => {
     const [toggle, setToggle] = useState(false);
@@ -44,6 +45,7 @@ const NavbarMenu = () => {
                     ))}
                 </NavbarHover>
                 <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
+                <SocialLinks />
             </div>
 
             <div className="sm:hidden flex w-full items-center justify-between">
@@ -121,6 +123,9 @@ const NavbarMenu = () => {
                             </motion.div>
                         ))}
                         <BorderMagicButton href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</BorderMagicButton>
+                        <div className="mt-6">
+                            <SocialLinks onNavigate={() => setToggle(false)} />
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

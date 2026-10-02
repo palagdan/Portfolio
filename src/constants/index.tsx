@@ -81,6 +81,11 @@ export const education = {
 
 export const resumeLink = "https://www.dropbox.com/scl/fi/003ypv66ukotz1kh28mqg/daniil_palagin_cv.pdf?rlkey=q9g1ij4kb1xh7k2xn9wix614s&st=vdpjohfr&dl=0"
 
+export const socials = [
+    { name: "GitHub", link: "https://github.com/palagdan" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/daniil-palagin-b412bb22a" },
+];
+
 export const projects = [
     {
         title: "GitmateAI",
